@@ -30,6 +30,6 @@ jobs:
       - name: Install dependencies and build 🔧
         run: npm run build
       - name: Publish package on NPM 📦
-        run: npm version minor && npm publish --access=public 
+        run: npm version minor --no-git-tag-version && npm publish --access=public 
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
