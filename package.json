@@ -1,0 +1,19 @@
+{
+  "name": "wcds-react",
+  "version": "1.0.0",
+  "description": "React UI Component Library",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/juniorcastro/wcds-react.git"
+  },
+  "author": "Junior Castro",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/juniorcastro/wcds-react/issues"
+  },
+  "homepage": "https://github.com/juniorcastro/wcds-react#readme"
+}
