@@ -29,9 +29,7 @@ jobs:
 
       - name: Install dependencies and build 🔧
         run: npm run build
-      - name: New Version
-        run: npm version minor
       - name: Publish package on NPM 📦
-        run: npm publish --access=public 
+        run: npm version minor && npm publish --access=public 
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
