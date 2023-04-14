@@ -12,7 +12,7 @@ export const Button: React.FC<ButtonProps> = ({ variant = 'primary', ...props })
 
   switch(variant) {
     case 'primary':
-      _style.backgroundColor = "#006E7F";
+      _style.backgroundColor = "#194fdb";
       _style.color = '#fff';
       break;
     case 'secondary':
@@ -25,7 +25,12 @@ export const Button: React.FC<ButtonProps> = ({ variant = 'primary', ...props })
       break;
   }
 
-  _style.padding = '5px 10px';
+  _style.padding = '12px 24px';
+  _style.fontFamily = 'Helvetica';
+  _style.fontWeight = 700;
+  _style.borderRadius = '3em';
+  _style.display = 'inline-block';
+  _style.border = 0;
 
   return (
     <button style={_style} {...props}>{children}</button>
