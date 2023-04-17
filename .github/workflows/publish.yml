@@ -26,10 +26,11 @@ jobs:
             ${{ runner.os }}-build-${{ env.cache-name }}-
             ${{ runner.os }}-build-
             ${{ runner.os }}-
-
+      - name: Bump package version
+        run: npm version patch --no-git-tag-version
       - name: Install dependencies and build 🔧
         run: npm run build
       - name: Publish package on NPM 📦
-        run: npm version patch --no-git-tag-version && npm publish --access=public 
+        run: npm publish --access=public 
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
