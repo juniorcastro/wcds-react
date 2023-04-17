@@ -27,7 +27,7 @@ jobs:
             ${{ runner.os }}-build-
             ${{ runner.os }}-
       - name: Bump package version
-        run: npm version patch --no-git-tag-version
+        run: npm version patch 
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
       - name: Install dependencies and build 🔧
