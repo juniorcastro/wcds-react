@@ -41,7 +41,7 @@ jobs:
         run: git config --global user.email "junior@juniorcastro.com" && git config --global user.name "Junior Castro"
 
       - name: Bump package version
-        run: npm version patch
+        run: npm version patch --allow-same-version=true
 
       - name: Install dependencies and build 🔧
         run: npm run build
