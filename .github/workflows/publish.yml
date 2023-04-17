@@ -26,8 +26,10 @@ jobs:
             ${{ runner.os }}-build-${{ env.cache-name }}-
             ${{ runner.os }}-build-
             ${{ runner.os }}-
+      - name: Setting user name and email
+        run: git config --global user.email "junior@juniorcastro.com" && git config --global user.name "Junior Castro"
       - name: Bump package version
-        run: npm version minor --no-git-tag-version
+        run: npm version minor
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
       - name: Install dependencies and build 🔧
