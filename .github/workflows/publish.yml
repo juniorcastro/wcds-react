@@ -40,10 +40,10 @@ jobs:
       - name: Setting user name and email
         run: git config --global user.email "junior@juniorcastro.com" && git config --global user.name "Junior Castro"
 
-      - name: Bump package version
-        run: npm version patch
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+      # - name: Bump package version
+      #   run: npm version patch
+      #   env:
+      #     NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       - name: Install dependencies and build 🔧
         run: npm run build
@@ -52,4 +52,4 @@ jobs:
         run: npm publish --access=public 
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-          
+
