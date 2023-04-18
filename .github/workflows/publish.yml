@@ -45,6 +45,7 @@ jobs:
           npm version patch 
           git add "package.json"
           git commit -m "update package version"
+          git push
 
       # - name: Install dependencies and build 🔧
       #   run: npm run build
