@@ -3,6 +3,9 @@ on:
   push:
     branches: [ main ]
   workflow_dispatch:
+
+permissions: write-all
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -43,9 +46,9 @@ jobs:
       - name: Bump package version
         run: |
           npm version patch --no-git-tag-version
-          # git add "package.json"
-          # git commit -m "update package version"
-          # git push
+          git add "package.json"
+          git commit -m "update package version"
+          git push
 
       - name: Install dependencies and build 🔧
         run: npm run build
