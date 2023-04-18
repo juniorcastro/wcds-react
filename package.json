@@ -8,7 +8,7 @@
     "dist"
   ],
   "scripts": {
-    "build": "rm -rf /dist && npm run build:esm && npm run build:cjs",
+    "build": "rm -rf /dist && npm run build:esm && npm run build:cjs && cp -r ./design_tokens/tokens.json ./dist",
     "build:esm": "tsc",
     "build:cjs": "tsc --module CommonJS --outDir dist/cjs",
     "storybook": "storybook dev -p 6006",
