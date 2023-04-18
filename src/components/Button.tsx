@@ -9,9 +9,10 @@ export const Button: React.FC<ButtonProps> = ({ variant = 'primary', ...props })
   const {children, style} = props;
 
   const _style: React.CSSProperties = style || {};
-//   var design_tokens = require('../../design_tokens/tokens.json');
-//   _style.backgroundColor = design_tokens.core.blue[500].value;
-  _style.backgroundColor = '#194fdb'
+  var design_tokens = require('../../tokens.json');
+//   console.log(design_tokens.light.button.primary.value);
+  _style.backgroundColor = design_tokens.light.button.primary.value;
+//   _style.backgroundColor = '#194fdb'
   _style.width = '208px';
   _style.color = '#ffffff';
   _style.padding = '12px 24px';
